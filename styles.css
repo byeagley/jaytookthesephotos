@@ -5,6 +5,12 @@
 html {
   hanging-punctuation: first last;
   color-scheme: light dark;
+
+  font-family: "Sour Gummy", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
 }
 
 h1,
@@ -49,6 +55,13 @@ img {
     scroll-behavior: smooth;
     scroll-padding-top: 3rem;
   }
+}
+
+.name {
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: 900;
+  font-size: clamp(3.5rem, -0.2059rem + 16.4706vw, 7rem);
 }
 
 .nav-bar {
