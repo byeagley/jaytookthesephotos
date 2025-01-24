@@ -1,3 +1,7 @@
+@view-transition {
+  navigation: auto;
+}
+
 html {
   hanging-punctuation: first last;
   color-scheme: light dark;
@@ -45,4 +49,34 @@ img {
     scroll-behavior: smooth;
     scroll-padding-top: 3rem;
   }
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.showcase-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+}
+
+.showcase-card {
+  outline: 1px solid grey;
+  min-width: 20em;
+  position: relative;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #000000;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  text-align: center;
 }
