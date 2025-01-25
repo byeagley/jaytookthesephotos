@@ -107,7 +107,7 @@ li {
   font-size: clamp(1.5rem, 7cqi, 4rem);
 }
 
-@container (max-width: 700px) {
+@container (max-width: 1000px) {
   .card-wrapper {
     display: flex;
     position: relative;
