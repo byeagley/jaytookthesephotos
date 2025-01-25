@@ -26,6 +26,21 @@
   navigation: auto;
 }
 
+@font-face {
+  font-family: "Sour Gummy";
+  src: url("font/sourgummy-variablefont_wdthwght-webfont.woff") format("woff"),
+    url("font/sourgummy-variablefont_wdthwght-webfont.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Sour Gummy";
+  src: url("font/sourgummy-italic-variablefont_wdthwght-webfont.woff")
+      format("woff"),
+    url("font/sourgummy-italic-variablefont_wdthwght-webfont.woff2")
+      format("woff2");
+  font-style: italic;
+}
+
 html {
   hanging-punctuation: first last;
   color-scheme: dark light;
