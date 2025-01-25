@@ -1,7 +1,7 @@
 @property --dark-bg {
   syntax: "<color>";
   inherits: true;
-  initial-value: #172121;
+  initial-value: #080c0c;
 }
 
 @property --light-bg {
