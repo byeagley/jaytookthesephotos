@@ -135,6 +135,7 @@ li {
   img {
     height: 100%;
     object-fit: contain;
+    border-radius: 5%;
   }
 }
 
@@ -181,7 +182,6 @@ li {
 
     img {
       z-index: -1;
-      border-radius: 5%;
     }
 
     p {
