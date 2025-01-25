@@ -36,6 +36,8 @@ html {
   font-style: normal;
   font-variation-settings: "wdth" 100;
 
+  font-display: block;
+
   background-color: light-dark(var(--light-bg), var(--dark-bg));
   color: light-dark(#444554, var(--light-bg));
 }
@@ -135,12 +137,8 @@ li {
   img {
     height: 100%;
     object-fit: cover;
-    border-radius: 5%;
+    border-radius: 1em;
   }
-}
-
-.shoot-title {
-  /* color: light-dark(var(--dark-bg), var(--light-bg)); */
 }
 
 .card-wrapper h1 {
