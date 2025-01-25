@@ -158,6 +158,7 @@ li {
 
 @media (max-width: 1000px) and (orientation: portrait) {
   .card-wrapper {
+    border-radius: 5%;
     display: flex;
     position: relative;
     background: linear-gradient(
