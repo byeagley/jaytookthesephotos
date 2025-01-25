@@ -172,6 +172,7 @@ li {
     margin: 1em;
 
     h1 {
+      color: var(--light-bg);
       position: absolute;
       left: 50%;
       top: 50%;
