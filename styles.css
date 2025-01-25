@@ -1,3 +1,27 @@
+@property --dark-bg {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #172121;
+}
+
+@property --light-bg {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #f1e6e4;
+}
+
+@property --primary-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #9d808d;
+}
+
+@property --dark-primary {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #513e46;
+}
+
 @view-transition {
   navigation: auto;
 }
@@ -11,6 +35,9 @@ html {
   font-weight: 400;
   font-style: normal;
   font-variation-settings: "wdth" 100;
+
+  background-color: light-dark(var(--light-bg), var(--dark-bg));
+  color: light-dark(#444554, var(--light-bg));
 }
 
 h1,
@@ -58,6 +85,8 @@ img {
 }
 
 .name {
+  color: light-dark(var(--dark-primary), var(--primary-color));
+
   text-align: center;
   font-weight: 900;
   font-size: clamp(3.5rem, -0.2059rem + 16.4706vw, 7rem);
@@ -110,6 +139,7 @@ li {
 }
 
 .card-wrapper h1 {
+  color: var(--light-bg);
   font-size: clamp(1.5rem, 7cqi, 4rem);
   text-align: center;
 }
@@ -130,7 +160,11 @@ li {
   .card-wrapper {
     display: flex;
     position: relative;
-    background: linear-gradient(to bottom, transparent, black);
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      light-dark(#444554, var(--dark-bg))
+    );
     margin: 1em;
 
     h1 {
@@ -142,6 +176,7 @@ li {
 
     img {
       z-index: -1;
+      border-radius: 5%;
     }
 
     p {
