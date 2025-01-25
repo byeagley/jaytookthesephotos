@@ -134,7 +134,7 @@ li {
 
   img {
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 5%;
   }
 }
