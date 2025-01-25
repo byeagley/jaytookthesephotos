@@ -138,8 +138,11 @@ li {
   }
 }
 
+.shoot-title {
+  /* color: light-dark(var(--dark-bg), var(--light-bg)); */
+}
+
 .card-wrapper h1 {
-  color: var(--light-bg);
   font-size: clamp(1.5rem, 7cqi, 4rem);
   text-align: center;
 }
