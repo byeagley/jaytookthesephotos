@@ -27,34 +27,148 @@
 }
 
 @font-face {
-  font-family: "Sour Gummy";
-  src: url("font/sourgummy-variablefont_wdthwght-webfont.woff") format("woff"),
-    url("font/sourgummy-variablefont_wdthwght-webfont.woff2") format("woff2");
+  font-family: "Sprat";
+  src: url("assets/fonts/sprat/Sprat-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: "Sour Gummy";
-  src: url("font/sourgummy-italic-variablefont_wdthwght-webfont.woff")
-      format("woff"),
-    url("font/sourgummy-italic-variablefont_wdthwght-webfont.woff2")
-      format("woff2");
-  font-style: italic;
+  font-family: "Sprat";
+  src: url("assets/fonts/sprat/Sprat-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sprat";
+  src: url("assets/fonts/sprat/Sprat-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sprat";
+  src: url("assets/fonts/sprat/Sprat-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sprat";
+  src: url("assets/fonts/sprat/Sprat-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sprat";
+  src: url("assets/fonts/sprat/Sprat-Thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Sprat";
+  src: url("assets/fonts/sprat/Sprat-CondensedBlack.woff2") format("woff2");
+  font-weight: 900;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: "Sprat";
+  src: url("assets/fonts/sprat/Sprat-CondensedBold.woff2") format("woff2");
+  font-weight: 700;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: "Sprat";
+  src: url("assets/fonts/sprat/Sprat-CondensedMedium.woff2") format("woff2");
+  font-weight: 500;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: "Sprat";
+  src: url("assets/fonts/sprat/Sprat-CondensedRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: "Sprat";
+  src: url("assets/fonts/sprat/Sprat-CondensedLight.woff2") format("woff2");
+  font-weight: 300;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: "Sprat";
+  src: url("assets/fonts/sprat/Sprat-CondensedThin.woff2") format("woff2");
+  font-weight: 100;
+  font-stretch: condensed;
+}
+
+@font-face {
+  font-family: "Sprat";
+  src: url("assets/fonts/sprat/Sprat-ExtendedBold.woff2") format("woff2");
+  font-weight: 700;
+  font-stretch: expanded;
+}
+
+@font-face {
+  font-family: "Sprat";
+  src: url("assets/fonts/sprat/Sprat-ExtendedRegular.woff2") format("woff2");
+  font-weight: 400;
+  font-stretch: expanded;
+}
+
+@font-face {
+  font-family: "Sprat";
+  src: url("assets/fonts/sprat/Sprat-ExtendedLight.woff2") format("woff2");
+  font-weight: 300;
+  font-stretch: expanded;
+}
+
+@font-face {
+  font-family: "Sprat";
+  src: url("assets/fonts/sprat/Sprat-ExtendedThin.woff2") format("woff2");
+  font-weight: 100;
+  font-stretch: expanded;
+}
+
+@font-face {
+  font-family: "Sprat";
+  src: url("assets/fonts/sprat/Sprat-ExtendedBlack.woff2") format("woff2");
+  font-weight: 900;
+  font-stretch: expanded;
+}
+
+@font-face {
+  font-family: "Sprat";
+  src: url("assets/fonts/sprat/Sprat-ExtendedMedium.woff2") format("woff2");
+  font-weight: 500;
+  font-stretch: expanded;
 }
 
 html {
   hanging-punctuation: first last;
   color-scheme: dark light;
 
-  font-family: "Sour Gummy", serif;
-  font-optical-sizing: auto;
+  font-family: "Sprat";
   font-weight: 400;
   font-style: normal;
-  font-variation-settings: "wdth" 100;
+  font-stretch: normal;
 
   font-display: block;
 
   background-color: light-dark(var(--light-bg), var(--dark-bg));
   color: light-dark(#444554, var(--light-bg));
+}
+
+body {
+  margin: 0;
 }
 
 h1,
@@ -101,28 +215,24 @@ img {
   }
 }
 
-.name {
-  color: light-dark(var(--dark-primary), var(--primary-color));
-
-  text-align: center;
-  font-weight: 900;
-  font-size: clamp(3.5rem, -0.2059rem + 16.4706vw, 7rem);
-  margin-top: 0;
-}
-
-.nav-bar {
+.primary-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-inline: 1rem;
-  margin-top: 1rem;
+  padding-inline: 1em;
+
+  position: sticky;
+  top: 0;
+
+  transition: background-color 500ms;
 }
 
-.showcase-header {
-  text-align: center;
+.primary-header.sticking {
+  background-color: blue;
+  z-index: 1;
 }
 
-ul {
+header ul {
   list-style: none;
   display: flex;
   gap: 1em;
@@ -130,75 +240,91 @@ ul {
   padding: 0;
 }
 
-li {
+header li {
   display: inline;
   gap: 0.25em;
+}
+
+.name {
+  color: light-dark(var(--dark-primary), var(--primary-color));
+
+  text-align: center;
+  font-weight: 900;
+  font-stretch: condensed;
+  font-size: clamp(3.5rem, -0.2059rem + 16.4706vw, 7rem);
+  margin-top: 0;
+}
+
+.showcase-header {
+  text-align: center;
 }
 
 .showcase {
   display: flex;
   flex-direction: column;
-  gap: 4em;
-}
-
-.card-container {
-  container: card / inline-size;
+  gap: 4rem;
 }
 
 .card-wrapper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  border-radius: 5%;
+  display: flex;
+  position: relative;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    light-dark(#444554, var(--dark-bg))
+  );
+  margin: 1em;
 
   img {
-    height: 100%;
-    object-fit: cover;
-    border-radius: 1em;
-  }
-}
-
-.card-wrapper h1 {
-  font-size: clamp(1.5rem, 7cqi, 4rem);
-  text-align: center;
-}
-
-.description {
-  margin: 1em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  p {
-    text-align: center;
-  }
-}
-
-@media (max-width: 1000px) and (orientation: portrait) {
-  .card-wrapper {
+    z-index: -1;
     border-radius: 5%;
-    display: flex;
-    position: relative;
-    background: linear-gradient(
-      to bottom,
-      transparent,
-      light-dark(#444554, var(--dark-bg))
-    );
-    margin: 1em;
+  }
+}
 
-    h1 {
-      color: var(--light-bg);
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
+.shoot-description {
+  display: none;
+}
+
+.shoot-title {
+  font-size: 4rem;
+  text-align: center;
+  color: var(--light-bg);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and ((min-width: 1000px) or (orientation: landscape)) {
+  .card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: none;
 
     img {
-      z-index: -1;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 1em;
     }
+  }
 
-    p {
-      display: none;
-    }
+  .shoot-title {
+    font-size: clamp(1.5rem, 7cqi, 4rem);
+    position: static;
+    transform: none;
+  }
+
+  .shoot-info {
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .shoot-description {
+    text-align: center;
+    display: block;
   }
 }
